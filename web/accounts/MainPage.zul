@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="iii" width="100%" height="100%" use="accounts.MainPage" >
+        <borderlayout>
+            <north border="none" height="48px">
+                <menubar hflex="1" id="_menu">
+                    <menu label="Config">
+                        <menupopup>
+                           <menuitem label="Users" onClick="spaceOwner.users()"/>
+                        </menupopup>
+                    </menu>
+                    <menu label="Tools">
+                        <menupopup>
+                           <menuitem label="About" onClick="spaceOwner.about()"/>
+                        </menupopup>
+                    </menu>
+                </menubar>
+                
+            </north>
+            <center id="_workbox">
+                
+            </center>    
+        </borderlayout>
+    </window>
+</zk>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window apply="samples.UploadDownload">
+        <fileupload id="upload" label="Upload" upload="true"/>
+        <button id="download" label="Download" visible="false" />
+    </window>
+</zk>

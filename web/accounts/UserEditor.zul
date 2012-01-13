@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window use="accounts.UserEditor" title="User" width="400px" sizable="false" closable="true" border="normal" position="center">
+        <zscript>
+            <![CDATA[
+                public void validateAll(){
+                    boolean failed = false;
+                    if (!_id.isValid()){
+                        _id.focus();
+                        failed = true;
+                    }
+                    if (!_name.isValid()){
+                        _name.focus();
+                        failed = true;
+                    }
+                    if (!_usergroup.isValid()){
+                        _usergroup.focus();
+                        failed = true;
+                    }
+                    if (!failed){
+                        spaceOwner.save();
+                    }
+                    else{
+                        _save.focus();
+                    }
+                }
+            ]]>
+        </zscript>
+        <grid>
+            <columns>
+                <column/>
+                <column/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="ID"  />
+                    <textbox id="_id" constraint="no empty"/>
+                </row>
+                <row>
+                    <label value="Name"  />
+                    <textbox id="_name" constraint="no empty"/>
+                </row>
+                <row>
+                    <label value="Usergroup"  />
+                    <combobox id="_usergroup" constraint="no empty, strict"/>
+                </row>
+            </rows>
+        </grid>
+        <div align="right">
+            <hbox style="padding :5px;">
+                <button label="Save" onClick="validateAll()" id= "_save" autodisable="self" />
+                <button label="Cancel" onClick="spaceOwner.close()" id="_cancel" autodisable="self" />
+            </hbox>
+        </div>
+    </window>
+</zk>

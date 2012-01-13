@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window title="Grid Sample" use="samples.GridSample" width="500px" >
+        <vbox >
+            <hbox>
+                <radiogroup >
+                    <radio value="source1" onCheck="spaceOwner.changeSource(1)" label="Array"/>
+                    <radio value="source2" onCheck="spaceOwner.changeSource(2)" label="Integer"/>
+                    <radio value="source3" onCheck="spaceOwner.changeSource(3)" label="UUID"/>
+                </radiogroup>
+            </hbox>
+            <grid id="grid" use="samples.AutomatedGrid" width="480px" mold="paging" >
+                <columns/>
+            </grid>
+        </vbox>
+    </window>
+</zk>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window use="accounts.About" closable="true" title="About" width="300px" height="200px">
+        <vbox heights=",40px" vflex="1">
+                <label value="ZK JUnit test Demo"/>
+                
+                <hbox>
+                    <button id="_close" label="close" onClick="spaceOwner.close()"/>
+                    <button id="_detail" label="details" onClick="spaceOwner.detail()"/>
+                </hbox>
+        </vbox>
+    </window>
+</zk>

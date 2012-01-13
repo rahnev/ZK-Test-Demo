@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="win" title="ZK Chat Room" width="300px" border="normal"  apply="tw.com.cruisy.chat.ChatComposer">
+    <div id="scrollDiv" visible="false" style="height: 300px;width:280px;overflow:scroll">
+        <vbox id="msgBoard" />
+    </div>
+    <vbox id="inputVb" visible="false">
+        <hbox>
+            <textbox id="msgTb" style="width:240px" />
+            <button id="exitBtn" label="exit" />
+        </hbox>
+    </vbox>
+    <div id="loginDiv" style="width: 200px">
+        <vbox>
+            <label value="Enter Chat" style="font-weight: bold" />
+            <hbox>
+                Name:
+                <textbox id="nameTb" constraint="no empty" />
+            </hbox>
+            <button id="loginBtn" label="submit" />
+        </vbox>
+    </div>
+</window>

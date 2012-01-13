@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window title="Simple Window" width="200px" height="80px" border="normal" position="center" style="padding:10px">
+        <textbox id="textbox" width="150px" onChange="spaceOwner.title = self.value"/>
+    </window>
+</zk>

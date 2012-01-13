@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window use="accounts.Users" hflex="1" vflex="1">
+        <borderlayout hflex="1" vflex="1">
+            <north height="40px">
+                <hbox>
+                    <button id="_delete" label="delete" onClick="spaceOwner.delete()"/>
+                    <button id="_edit" label="edit" onClick="spaceOwner.edit()"/>
+                    <button id="_add" label="add" onClick="spaceOwner.add()"/>
+                    <label id="_detail" value="" /> 
+                </hbox>
+            </north>
+            <west width="200px">
+                <tree id="_usergroupTree" treeitemRenderer="${spaceOwner.treeRenderer}" hflex="1"  vflex="1"/>
+            </west>
+            <center hflex="1">
+                <vbox hflex="1">
+                    <hbox hflex="1">  
+                        <textbox id="_filter"/> 
+                        <button id="_btnFilter" onClick="spaceOwner.filter()" label="filter"/> 
+                        <div align="right" hflex="1">
+                            <button id="_addUser" label="add user" onClick="spaceOwner.addUser()"/>
+                        </div>
+                    </hbox>
+                    <grid id="_userGrid" model="${spaceOwner.gridModel}" rowRenderer="${spaceOwner.gridRenderer}" hflex="1" vflex="1">
+                        <rows />
+                    </grid>
+                </vbox>
+            </center>
+        </borderlayout>
+    </window>
+</zk>
